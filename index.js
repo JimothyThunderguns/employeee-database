@@ -60,7 +60,7 @@ const addDepartment = async () => {
             'INSERT INTO department (name) VALUES (?)',
             answers.name)
 
-        console.table('Department has been added!')
+        console.table('Department added')
         promptChoices()
     } catch (err) {
         throw new Error(err)
@@ -72,7 +72,7 @@ const addRole = async () => {
         {
             type: 'input',
             name: 'name',
-            message: 'Enter the new role title:'
+            message: 'Enter the new role:'
         }, {
             type: 'number',
             name: 'salary',
@@ -149,7 +149,7 @@ const updateEmployee = async () => {
             'UPDATE employee SET role_id = ? WHERE id = ?', 
             [(answers.role_id), (answers.id)])
         
-            console.log('EMPLOYEE has been UDPATED')
+            console.log('EMPLOYEE has been updated')
         promptChoices()
     } catch (err) {
         throw new Error(err)
